@@ -14,6 +14,9 @@ pytorch:
   - nccl
   - ninja
   - protobuf@3.25.3
+  - py-numpy
+  - py-tqdm
+  - py-lightning
   - py-typing-extensions
   - py-torch@2.3 +distributed +cuda cuda_arch=90 +cudnn +nccl +mpi
   variants:
