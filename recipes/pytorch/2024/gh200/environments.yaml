@@ -1,0 +1,28 @@
+pytorch:
+  compiler:
+  - toolchain: gcc
+    spec: gcc@12.3
+  mpi:
+    spec: cray-mpich
+    gpu: cuda
+  unify: true
+  specs:
+  - python@3.11
+  - cmake
+  - cuda@12
+  - cray-mpich
+  - nccl
+  - ninja
+  - protobuf@3.25.3
+  - py-typing-extensions
+  - py-torch@2.3 +distributed +cuda cuda_arch=90 +cudnn +nccl +mpi
+  variants:
+  - +mpi
+  - +cuda
+  - cuda_arch=90
+  views:
+    develop:
+      link: roots
+      exclude: ["py-torch"]
+    pytorch:
+      link: roots
