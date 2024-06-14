@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#  pytorch writes its libs to lib64
+echo "export LD_LIBRARY_PATH={{ env.mount }}/env/pytorch/lib64:\$LD_LIBRARY_PATH" >> {{ env.mount }}/env/pytorch/activate.sh
