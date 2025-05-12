@@ -178,6 +178,8 @@ uenvs:
     "2024":
       recipes:
         gh200: "2024/gh200"
+        zen2: "2024/mc"
+        zen3: "2023/mc"
       deploy:
         daint: [gh200]
       develop: False
